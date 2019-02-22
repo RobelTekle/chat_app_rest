@@ -1,10 +1,12 @@
 const http = require('http')
+const router = require('./router')
+require('./db')
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' })
-  res.end('Hello Man!')
-})
+const port = process.env.PORT || 4000
+const host = process.env.HOST || 'localhost'
 
-server.listen({ port: 4000, host: 'localhost' }, () => {
-  console.log('Server listening at port 4000')
+const server = http.createServer(router)
+
+server.listen({ port, host }, () => {
+  console.log(`Server listening at port ${port}`)
 })
