@@ -13,6 +13,8 @@ const router = (req, res) => {
       break
     case '/api/postMessage':
       break
+    case 'api/login':
+      break
     default:
       res.writeHead(400, {
         'Content-Type': 'text/plain',
