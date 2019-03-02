@@ -1,5 +1,6 @@
 const appFront = require('./home')
 const chatList = require('./chatList')
+const createChatBox = require('./createChatBox')
 
 const router = (req, res) => {
   switch (req.url) {
@@ -8,6 +9,9 @@ const router = (req, res) => {
       break
     case '/api/chatList':
       chatList(req, res)
+      break
+    case '/api/createChatBox':
+      createChatBox(req, res)
       break
     case '/api/chatBox':
       break

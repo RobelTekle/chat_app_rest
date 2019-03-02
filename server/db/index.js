@@ -1,5 +1,8 @@
 const mongoose = require('mongoose')
 const { mongoDB } = require('./secrets')
+const Users = require('./models/Users')
+const ChatBox = require('./models/ChatBox')
+const Message = require('./models/Message')
 
 mongoose.connect(mongoDB, { useNewUrlParser: true })
 
@@ -9,19 +12,8 @@ db.once('open', () => {
   console.log('Mongoose : connection open')
 })
 
-// const catSchema = mongoose.Schema({
-//   name: String
-// })
-
-// catSchema.methods.speak = function() {
-//   console.log(`my name is ${this.name}`)
-// }
-
-// const Cat = mongoose.model('Cat', catSchema)
-
-// const jack = new Cat({ name: 'Jack' })
-
-// jack.save(function(err, jack) {
-//   if (err) return console.error(err)
-//   jack.speak()
-// })
+module.exports = {
+  Users,
+  ChatBox,
+  Message
+}

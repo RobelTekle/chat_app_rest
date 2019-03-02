@@ -3,7 +3,7 @@ const { Schema, model } = require('mongoose')
 const chatBoxType = {
   id: String,
   name: String,
-  messages: [String]
+  messagesId: [String],
 }
 
 const chatBoxSchema = Schema(chatBoxType)
