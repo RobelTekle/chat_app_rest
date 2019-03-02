@@ -9,6 +9,10 @@ const router = (req, res) => {
     case '/api/chatList':
       chatList(req, res)
       break
+    case '/api/chatBox':
+      break
+    case '/api/postMessage':
+      break
     default:
       res.writeHead(400, {
         'Content-Type': 'text/plain',
