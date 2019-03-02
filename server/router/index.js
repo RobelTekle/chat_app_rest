@@ -6,12 +6,13 @@ const router = (req, res) => {
     case '/':
       appFront(req, res)
       break
-    case '/chatList':
+    case '/api/chatList':
       chatList(req, res)
+      break
     default:
       res.writeHead(400, {
         'Content-Type': 'text/plain',
-        'x-antani': 'ciao'
+        'x-error': 'oups'
       })
       res.end('Something Wrong')
       break
