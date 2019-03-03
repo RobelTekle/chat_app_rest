@@ -22,7 +22,6 @@ const router = (req, res) => {
     default:
       res.writeHead(400, {
         'Content-Type': 'text/plain',
-        'x-error': 'oups'
       })
       res.end('Something Wrong')
       break

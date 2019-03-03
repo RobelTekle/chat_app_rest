@@ -5,7 +5,7 @@ const createChatBox = (req, res) => {
   const { method } = req
   if (method !== 'POST') {
     res.writeHead(400, { 'Content-Type': 'text/plain' })
-    res.end('Error')
+    res.end('Error: only post method is available at this route')
     return
   }
   let body = ''
